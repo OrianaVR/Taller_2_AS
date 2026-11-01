@@ -1,0 +1,9 @@
+extends ../layout
+
+block content
+  h1= pokenea.getName()
+  img(src=pokenea.getImage(), alt=pokenea.getName())
+  blockquote= pokenea.getPhrase()
+  small Container Id: #{containerId}
+  p
+    a(href=imagePath) Ver otro
