@@ -1,12 +1,10 @@
-const Controller = require("./Controller");
 const { routeNames } = require("../routes/paths");
 
-class PokeneaController extends Controller {
+class PokeneaController {
   #pokeneaService;
   #containerService;
 
   constructor(pokeneaService, containerService) {
-    super();
     this.#pokeneaService = pokeneaService;
     this.#containerService = containerService;
   }
@@ -30,7 +28,7 @@ class PokeneaController extends Controller {
     viewData.containerId = this.#containerService.getContainerId();
     viewData.imagePath = routeNames.pokeneaImage;
 
-    this.view(response, "pokenea/image", viewData);
+    response.render("pokenea/image", { viewData });
   }
 }
 

@@ -7,35 +7,11 @@ class Pokenea {
   #phrase;
 
   constructor(id, name, height, ability, image, phrase) {
-    this.setId(id);
-    this.setName(name);
-    this.setHeight(height);
-    this.setAbility(ability);
-    this.setImage(image);
-    this.setPhrase(phrase);
-  }
-
-  setId(id) {
     this.#id = id;
-  }
-
-  setName(name) {
     this.#name = name;
-  }
-
-  setHeight(height) {
     this.#height = height;
-  }
-
-  setAbility(ability) {
     this.#ability = ability;
-  }
-
-  setImage(image) {
     this.#image = image;
-  }
-
-  setPhrase(phrase) {
     this.#phrase = phrase;
   }
 

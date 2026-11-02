@@ -1,11 +1,11 @@
 const basePath = "/";
 const pokeneaPath = "pokenea";
-const imagePath = "imagen";
+const imagePath = "image";
 
 const routeNames = {
   home: basePath,
-  pokeneaJson: `${basePath}${pokeneaPath}`,
-  pokeneaImage: `${basePath}${pokeneaPath}/${imagePath}`,
+  pokeneaJson: basePath + pokeneaPath,
+  pokeneaImage: basePath + pokeneaPath + "/" + imagePath,
 };
 
 module.exports = { basePath, routeNames };

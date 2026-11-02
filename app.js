@@ -4,8 +4,7 @@ const PokeneaService = require("./services/PokeneaService");
 const ContainerService = require("./services/ContainerService");
 const PokeneaController = require("./controllers/PokeneaController");
 const HomeController = require("./controllers/HomeController");
-const createPokeneaRouter = require("./routes/pokeneaRoutes");
-const createHomeRouter = require("./routes/homeRoutes");
+const createWebRouter = require("./routes/web");
 const { basePath } = require("./routes/paths");
 
 function createApp() {
@@ -20,8 +19,7 @@ function createApp() {
   const pokeneaController = new PokeneaController(pokeneaService, containerService);
   const homeController = new HomeController();
 
-  app.use(basePath, createHomeRouter(homeController));
-  app.use(basePath, createPokeneaRouter(pokeneaController));
+  app.use(basePath, createWebRouter(homeController, pokeneaController));
 
   return app;
 }

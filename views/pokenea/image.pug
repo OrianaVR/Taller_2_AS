@@ -1,9 +1,9 @@
 extends ../layout
 
 block content
-  h1= pokenea.getName()
-  img(src=pokenea.getImage(), alt=pokenea.getName())
-  blockquote= pokenea.getPhrase()
-  small Container Id: #{containerId}
+  h1= viewData.pokenea.getName()
+  img(src=viewData.pokenea.getImage(), alt=viewData.pokenea.getName())
+  blockquote= viewData.pokenea.getPhrase()
+  small ID del contenedor: #{viewData.containerId}
   p
-    a(href=imagePath) Ver otro
+    a(href=viewData.imagePath) Ver otro
